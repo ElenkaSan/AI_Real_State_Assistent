@@ -11,9 +11,9 @@ Includes short-term memory (10–15 messages) and lightweight CRM (user name, em
 [Elena Nurullina](https://www.linkedin.com/in/elena-nurullina)
 [Younes Slaoui](https://www.linkedin.com/in/younesslaoui)
 
-![ai1](https://github.com/user-attachments/assets/bd9ea9bf-a1a0-4b6a-aaec-73616edef930)
+![ai1](https://github.com/user-attachments/assets/3f1758ca-a97a-4411-9dab-b29d4e521c29)
 
-![ai2](https://github.com/user-attachments/assets/1e5cec41-c1c0-496c-b1e6-451b81eab922)
+![ai2](https://github.com/user-attachments/assets/b8c04303-7ee3-45bc-8061-c8b0b42d98ac)
 
 ### Work Plan – 2 Day Delivery
 
