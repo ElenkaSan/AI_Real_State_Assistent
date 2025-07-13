@@ -164,7 +164,7 @@ curl --location 'http://localhost:8000/chat' \
 --header 'Content-Type: application/json' \
 --data '{
     "user_id": "test123",
-    "message": "Which suites have rent below $90?",
+    "message": "Hello, is any property available below $90?",
     "chat_history": []
 }'
 ```
@@ -172,7 +172,7 @@ Returns:
 
 ```
 {
-    "response": "Based on the provided context, there are no suites with rent below $90 per square foot per year. The suite mentioned, Suite 903 at 104-110 E 40th St, has a rent of $95.00 per square foot per year.",
+    "response": "Yes, there is a property available at 315 Fifth Ave, Suite 906, with a rent of $85.00 per square foot per year.",
     "duration_ms": 2008
 }
 ```
@@ -187,7 +187,7 @@ curl --location 'http://localhost:8000/speak' \
 Returns:
 
 ```
-{"text":"Hello, this is a test for OpenAI Whisper Speech 2x transcription. I need to get information about the real estate market, how many people live in the area, and what the average rent is."}
+{"text": "Hello, this is a test for OpenAI Whisper Speech 2x transcription. I need to get information about the real estate market, how many people live in the area, and what the average rent is."}
 ```
 
 GET /audio/test-audio
