@@ -9,6 +9,7 @@ Includes short-term memory (10–15 messages) and lightweight CRM (user name, em
 
 ### Project Built by
 [Elena Nurullina](https://www.linkedin.com/in/elena-nurullina) 
+
 [Younes Slaoui](https://www.linkedin.com/in/younesslaoui)
 
 ![ai1](https://github.com/user-attachments/assets/38bca966-6db0-450f-b4e5-794f9abb779f)
