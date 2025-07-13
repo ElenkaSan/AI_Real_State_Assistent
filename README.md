@@ -8,12 +8,12 @@ Includes short-term memory (10–15 messages) and lightweight CRM (user name, em
 
 
 ### Project Built by
-[Elena Nurullina](https://www.linkedin.com/in/elena-nurullina)
+[Elena Nurullina](https://www.linkedin.com/in/elena-nurullina) 
 [Younes Slaoui](https://www.linkedin.com/in/younesslaoui)
 
-![ai1](https://github.com/user-attachments/assets/3f1758ca-a97a-4411-9dab-b29d4e521c29)
+![ai1](https://github.com/user-attachments/assets/38bca966-6db0-450f-b4e5-794f9abb779f)
 
-![ai2](https://github.com/user-attachments/assets/b8c04303-7ee3-45bc-8061-c8b0b42d98ac)
+![ai2](https://github.com/user-attachments/assets/6c4a9f51-d1d0-48d3-9b79-836c0f08463e)
 
 ### Work Plan – 2 Day Delivery
 
