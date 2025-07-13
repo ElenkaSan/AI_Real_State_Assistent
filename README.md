@@ -1,5 +1,6 @@
 # AI Real Estate Assistant & CRM for Commercial Listings
 
+Voice Conversational Agentic AI:
 An intelligent voice-based AI assistant + CRM that helps brokers and clients explore, analyze, and manage commercial real estate listings via natural conversation.
 
 Voice Assistant → Whisper Speech-to-Text → GPT-4o (with LangChain + RAG over CSV) → Response  
@@ -78,8 +79,24 @@ voice-agent-ai/
 ├── README.md                   
 |── run.sh                      # Script to launch API locally
 │
-└── frontend/ 
-    └── react-client/           # Chat UI (React + Mic Input) with voice + chat
+|   frontend/                   # Chat UI (React + Mic Input) with voice + chat
+└── react-client/
+    ├── public/
+    │   ├── logo.png
+    │   └── index.html
+    ├── src/
+    │   ├── App.js
+    │   ├── index.js
+    │   ├── assets/
+    │   │   └── nyc-bg.jpg
+    │   ├── components/
+    │   │   ├── ChatWindow.js
+    │   │   ├── MicInput.js
+    │   │   ├── MicRecorder.js
+    │   │   ├── MessageBubble.js
+    │   │   └── Header.js
+    ├── .env.local
+    └── package.json
 
 ```
 
@@ -106,6 +123,12 @@ touch .env
 
 # 4. Start the server
 uvicorn app.main:app --reload
+
+# 5. Open another terminal to run client side
+cd frontend/rect-client 
+npm install
+npm start
+
 ```
 
 ### Sample API Calls
