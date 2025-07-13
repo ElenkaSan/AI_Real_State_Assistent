@@ -1,0 +1,21 @@
+{
+  "user_id": "test123",
+  "history": [
+    {
+      "sender": "user",
+      "message": "What’s the cheapest office on 38th Street?"
+    },
+    {
+      "sender": "assistant",
+      "message": "Suite E6 at 15 W 38th St is $87 per SF."
+    },
+    {
+      "sender": "user",
+      "message": "And who is the broker for that?"
+    },
+    {
+      "sender": "assistant",
+      "message": "James Norrington is listed as Associate 1."
+    }
+  ]
+}

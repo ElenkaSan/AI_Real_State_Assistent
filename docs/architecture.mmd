@@ -1,0 +1,10 @@
+flowchart TD
+    A[User (Voice)] --> B[FastAPI: /speak]
+    B --> C[Whisper API - STT]
+    C --> D[Transcribed Text]
+    D --> E[FastAPI: /chat]
+    E --> F[LangChain Memory (Window 10-15 turns)]
+    F --> G[LangChain RAG Retriever (ChromaDB)]
+    G --> H[OpenAI GPT-4o]
+    H --> I[Response Text]
+    I --> J[Frontend UI: Chat + TTS display]
