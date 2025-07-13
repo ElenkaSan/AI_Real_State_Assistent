@@ -16,6 +16,8 @@ Includes short-term memory (10–15 messages) and lightweight CRM (user name, em
 
 ![ai02](https://github.com/user-attachments/assets/3cbbfb8d-3f8e-40b0-9c35-e6889d08c891)
 
+![ai3](https://github.com/user-attachments/assets/9e6480a8-5020-4254-94b6-21c673a18b64)
+
 ### Work Plan – 2 Day Delivery
 
 **Day 1:**
