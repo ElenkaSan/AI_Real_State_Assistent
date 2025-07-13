@@ -7,7 +7,13 @@ Voice Assistant → Whisper Speech-to-Text → GPT-4o (with LangChain + RAG over
 Includes short-term memory (10–15 messages) and lightweight CRM (user name, email, history).
 
 
-### Project Built by 
+### Project Built by
+[Elena Nurullina](https://www.linkedin.com/in/elena-nurullina)
+[Younes Slaoui](https://www.linkedin.com/in/younesslaoui)
+
+![ai1](https://github.com/user-attachments/assets/bd9ea9bf-a1a0-4b6a-aaec-73616edef930)
+
+![ai2](https://github.com/user-attachments/assets/1e5cec41-c1c0-496c-b1e6-451b81eab922)
 
 ### Work Plan – 2 Day Delivery
 
