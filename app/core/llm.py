@@ -2,7 +2,7 @@ from app.core.memory import get_memory
 import os
 import time
 from dotenv import load_dotenv
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferWindowMemory
 from app.core.rag import get_vector_store

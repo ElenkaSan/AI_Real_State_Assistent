@@ -1,6 +1,6 @@
-from langchain.vectorstores import Chroma
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.document_loaders.csv_loader import CSVLoader
+from langchain_community.vectorstores import Chroma
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.document_loaders import CSVLoader
 import os
 
 CHROMA_PATH = "./chroma_store"
