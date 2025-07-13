@@ -19,13 +19,16 @@ def get_response_with_rag(user_id: str, message: str, chat_history: list):
         openai_api_key=openai_api_key
     )
 
-    retriever = get_vector_store().as_retriever()
+    retriever = get_vector_store().as_retriever(
+        search_type="mmr",
+        search_kwargs={'k': 5, 'fetch_k': 20}
+    )
 
     chain = ConversationalRetrievalChain.from_llm(
         llm=llm,
         retriever=retriever,
         # memory=memory,
-        return_source_documents=False
+        return_source_documents=True
     )
 
     start = time.time()
@@ -34,5 +37,19 @@ def get_response_with_rag(user_id: str, message: str, chat_history: list):
         "chat_history": chat_history
     })
     duration = int((time.time() - start) * 1000)
+
+    print("\n" + "="*50)
+    print("            RAG RETRIEVAL RESULTS            ")
+    print("="*50)
+    source_documents = response.get('source_documents', [])
+    if source_documents:
+        print(f"Found {len(source_documents)} matching document(s):")
+        for i, doc in enumerate(source_documents):
+            row_number = doc.metadata.get('row', 'N/A')
+            print(f"\n--- Match {i+1} (Source Row: {row_number}) ---")
+            print(doc.page_content)
+    else:
+        print("No documents found by the retriever.")
+    print("="*50 + "\n")
 
     return response["answer"], duration

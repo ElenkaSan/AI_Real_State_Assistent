@@ -1,5 +1,6 @@
 import requests
 import os
+import shutil
 
 # The base URL of your running FastAPI application
 BASE_URL = "http://127.0.0.1:8000"
@@ -73,6 +74,9 @@ def start_interactive_chat():
             break
 
 if __name__ == "__main__":
+    # Delete the existing ChromaDB vector store directory
+    shutil.rmtree('./chroma_store', ignore_errors=True)
+
     # We still need to make sure the document is uploaded for the chat to work.
     # You only need to run this once per server restart.
     test_upload()
