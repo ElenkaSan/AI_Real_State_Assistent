@@ -38,24 +38,28 @@ export default function MicInput({ onTranscript }) {
     };
 
     mediaRecorderRef.current.onstop = async () => {
-      cancelAnimationFrame(animationFrameRef.current);
-      audioContextRef.current.close();
+  cancelAnimationFrame(animationFrameRef.current);
 
-      const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/wav' });
-      const formData = new FormData();
-      formData.append('audio', audioBlob, 'voice.wav');
+  if (audioContextRef.current && audioContextRef.current.state !== 'closed') {
+    await audioContextRef.current.close();
+  }
 
-      try {
-        const res = await fetch(`${process.env.REACT_APP_API_URL}/speak`, {
-          method: 'POST',
-          body: formData,
-        });
-        const data = await res.json();
-        onTranscript(data.text);
-      } catch (error) {
-        console.error('Error processing audio:', error);
-      }
-    };
+  const audioBlob = new Blob(audioChunksRef.current, { type: 'audio/wav' });
+  const formData = new FormData();
+  formData.append('audio', audioBlob, 'voice.wav');
+
+  try {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/speak`, {
+      method: 'POST',
+      body: formData,
+    });
+    const data = await res.json();
+    onTranscript(data.text);
+  } catch (error) {
+    console.error('Error processing audio:', error);
+  }
+};
+
 
     mediaRecorderRef.current.start();
     setRecording(true);
@@ -67,11 +71,13 @@ export default function MicInput({ onTranscript }) {
   };
 
   useEffect(() => {
-    return () => {
-      cancelAnimationFrame(animationFrameRef.current);
-      audioContextRef.current?.close();
-    };
-  }, []);
+  return () => {
+    cancelAnimationFrame(animationFrameRef.current);
+    if (audioContextRef.current && audioContextRef.current.state !== 'closed') {
+      audioContextRef.current.close();
+    }
+  };
+}, []);
 
   return (
     <div className="d-flex flex-column align-items-center mt-3 w-100">
